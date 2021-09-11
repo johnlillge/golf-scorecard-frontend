@@ -1,0 +1,54 @@
+.scorecard-container {
+	outline: black double 10px;
+	margin: auto;
+	margin-top: 75px;
+}
+
+.default-row {
+	text-align: center;
+	border: black solid 1px;
+}
+
+.course-row {
+	font-size: x-large;
+	background-color: rgb(218, 190, 147);
+}
+
+.hole-row {
+	color: white;
+	background-color: black;
+}
+
+.champ-yds-row {
+	background-color: rgb(135, 175, 235);
+}
+
+.mens-yds-row {
+	background-color: rgb(233, 233, 233);
+}
+
+.ladies-yds-row {
+	background-color: rgb(249, 70, 70);
+}
+
+.handicap-row {
+	color: white;
+	background-color: black;
+}
+
+.par-row {
+	color: white;
+	background-color: green;
+}
+
+.player-row {
+	background-color: white;
+}
+
+.default-col {
+	border: black solid 1px;
+}
+
+.first-col {
+	text-align: left;
+}

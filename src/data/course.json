@@ -1,0 +1,100 @@
+{
+    "name": "Brush Creek Golf Course",
+    "street": "2001 W. St. James Rd.",
+    "city": "Orangeville",
+    "state": "IL",
+    "zipcode": 61032,
+    "hole_count": 9,
+    "par": 36,
+    "holes": [
+        {
+            "id": 1,
+            "hole_number": 1,
+            "par": 4,
+            "handicap": 8,
+            "championship_yds": 300,
+            "mens_yds": 300,
+            "ladies_yds": 255
+        },
+        {
+            "id": 2,
+            "course": 1,
+            "hole_number": 2,
+            "par": 3,
+            "handicap": 4,
+            "championship_yds": 168,
+            "mens_yds": 127,
+            "ladies_yds": 127
+        },
+        {
+            "id": 3,
+            "course": 1,
+            "hole_number": 3,
+            "par": 4,
+            "handicap": 2,
+            "championship_yds": 300,
+            "mens_yds": 300,
+            "ladies_yds": 247
+        },
+        {
+            "id": 4,
+            "course": 1,
+            "hole_number": 4,
+            "par": 4,
+            "handicap": 6,
+            "championship_yds": 433,
+            "mens_yds": 360,
+            "ladies_yds": 286
+        },
+        {
+            "id": 5,
+            "course": 1,
+            "hole_number": 5,
+            "par": 5,
+            "handicap": 9,
+            "championship_yds": 552,
+            "mens_yds": 512,
+            "ladies_yds": 442
+        },
+        {
+            "id": 6,
+            "course": 1,
+            "hole_number": 6,
+            "par": 4,
+            "handicap": 5,
+            "championship_yds": 400,
+            "mens_yds": 350,
+            "ladies_yds": 257
+        },
+        {
+            "id": 7,
+            "course": 1,
+            "hole_number": 7,
+            "par": 5,
+            "handicap": 1,
+            "championship_yds": 490,
+            "mens_yds": 480,
+            "ladies_yds": 360
+        },
+        {
+            "id": 8,
+            "course": 1,
+            "hole_number": 8,
+            "par": 3,
+            "handicap": 7,
+            "championship_yds": 175,
+            "mens_yds": 145,
+            "ladies_yds": 125
+        },
+        {
+            "id": 9,
+            "course": 1,
+            "hole_number": 9,
+            "par": 4,
+            "handicap": 3,
+            "championship_yds": 400,
+            "mens_yds": 360,
+            "ladies_yds": 287
+        }
+    ]
+}
