@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import course from '../../data/course.json';
 import './ScoreInput.css';
+import Card from 'react-bootstrap/Card';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 const ScoreInput = (props) => {
 	const [ holeScore, setHoleScore ] = useState('');
@@ -18,15 +22,22 @@ const ScoreInput = (props) => {
 	};
 	return (
 		<div className="input-container">
-			<h4>{`Current Hole: ${current_hole.hole_number}`}</h4>
-			<h4>{`Par: ${current_hole.par}`}</h4>
-			<form onSubmit={handleSubmit}>
-				<label>
-					Score:
-					<input type="number" value={holeScore} autoFocus="autofocus" onChange={handleChange} />
-				</label>
-				<input type="submit" value="Submit" />
-			</form>
+			<Card className="text-center" border="secondary">
+				<Card.Body>
+					<Card.Title>{`Current Hole: ${current_hole.hole_number}`}</Card.Title>
+					<Card.Text>{`Par: ${current_hole.par}`}</Card.Text>
+					<InputGroup>
+						<FormControl
+							type="number"
+							value={holeScore}
+							autoFocus="autofocus"
+							onChange={handleChange}
+							aria-label="Enter new score"
+						/>
+						<Button onClick={handleSubmit}>Submit</Button>
+					</InputGroup>
+				</Card.Body>
+			</Card>
 		</div>
 	);
 };

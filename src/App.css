@@ -5,7 +5,7 @@
 }
 
 body {
-	background: white !important;
+	background: rgb(232, 232, 232) !important;
 	min-height: 100vh;
 	display: flex;
 	font-weight: 400;
@@ -74,13 +74,14 @@ html,
 
 .round-detail-div {
 	margin: auto;
+	width: 30rem;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 50px;
 }
 
 .score-change-div {
 	margin: auto;
-	width: 15%;
+	width: 20rem;
 	text-align: center;
 }
 
@@ -99,4 +100,8 @@ html,
 
 .no-rounds-message > h5 {
 	font-weight: 200;
+}
+
+.left-col {
+	text-align: left;
 }

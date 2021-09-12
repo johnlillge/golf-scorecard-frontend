@@ -18,7 +18,6 @@ const ScoreChanger = (props) => {
 
 	return (
 		<div className="score-change-div">
-			Update a Score
 			<InputGroup>
 				<DropdownButton variant="outline-secondary" title={selectedHole}>
 					{props.selectedRound.scores.map((score) => (

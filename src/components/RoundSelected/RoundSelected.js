@@ -2,7 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import ScorecardContainer from '../ScorecardContainer/ScorecardContainer';
 import ScoreChanger from '../ScoreChanger/ScoreChanger';
 import roundsInstance from '../../api/RoundsAPI';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
 
 const RoundSelected = (props) => {
 	const history = useHistory();
@@ -72,20 +75,45 @@ const RoundSelected = (props) => {
 		<div>
 			<ScorecardContainer scores={formattedScores} />
 			<div className="round-detail-div">
-				<Link
-					to={'/rounds'}
-					onClick={() => {
-						props.setSelectedRound({});
-						props.populateRounds();
-					}}
-				>
-					Back to Previous Rounds
-				</Link>
-				<form className="round-delete-button" onSubmit={deleteRound}>
-					<input type="submit" value="Delete Round" />
-				</form>
+				<Card className="text-center" border="secondary">
+					<Card.Header>
+						<h4>Update a Score</h4>
+					</Card.Header>
+					<Card.Body>
+						<ScoreChanger selectedRound={props.selectedRound} updateRound={updateRound} />
+					</Card.Body>
+					<Card.Footer>
+						<div />
+					</Card.Footer>
+					<Card.Footer>
+						<Row>
+							<div className="col ml-0 px-0 text-start">
+								<Button
+									className="btn-sm pl-0"
+									href={'/rounds'}
+									onClick={() => {
+										props.setSelectedRound({});
+										props.populateRounds();
+									}}
+								>
+									Previous Rounds
+								</Button>
+							</div>
+							<div className="col mr-0 px-0 text-end">
+								<Button
+									className="btn-sm pr-0"
+									variant="danger"
+									type="submit"
+									value="Delete Round"
+									onSubmit={deleteRound}
+								>
+									Delete Round
+								</Button>
+							</div>
+						</Row>
+					</Card.Footer>
+				</Card>
 			</div>
-			<ScoreChanger selectedRound={props.selectedRound} updateRound={updateRound} />
 		</div>
 	);
 };
