@@ -22,7 +22,10 @@ const ScoreChanger = (props) => {
 			<InputGroup>
 				<DropdownButton variant="outline-secondary" title={selectedHole}>
 					{props.selectedRound.scores.map((score) => (
-						<Dropdown.Item onClick={() => setSelectedHole(`${score.hole_num}`)}>
+						<Dropdown.Item
+							key={`dropdown-item-${score.hole_num}`}
+							onClick={() => setSelectedHole(`${score.hole_num}`)}
+						>
 							{score.hole_num}
 						</Dropdown.Item>
 					))}

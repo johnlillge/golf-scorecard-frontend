@@ -35,6 +35,12 @@ const AppNav = () => {
 					<Nav.Link as={Link} to="/rounds">
 						My Previous Rounds
 					</Nav.Link>
+					<Nav.Link as={Link} to="/best-scores">
+						My Best Scores
+					</Nav.Link>
+					<Nav.Link as={Link} to="/average-scores">
+						My Average Scores
+					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 			<Form inline="true" className="mx-3">

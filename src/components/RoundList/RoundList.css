@@ -4,12 +4,7 @@
 	border: #0d9728 solid 5px;
 	border-radius: 10px;
 	padding-bottom: 15px;
-}
-
-.list-header {
-	text-align: center;
 	padding-top: 15px;
-	text-decoration: underline;
 }
 
 .round-listgroup {

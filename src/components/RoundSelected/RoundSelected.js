@@ -72,7 +72,13 @@ const RoundSelected = (props) => {
 		<div>
 			<ScorecardContainer scores={formattedScores} />
 			<div className="round-detail-div">
-				<Link to={'/rounds'} onClick={() => props.setSelectedRound({})}>
+				<Link
+					to={'/rounds'}
+					onClick={() => {
+						props.setSelectedRound({});
+						props.populateRounds();
+					}}
+				>
 					Back to Previous Rounds
 				</Link>
 				<form className="round-delete-button" onSubmit={deleteRound}>

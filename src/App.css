@@ -83,3 +83,20 @@ html,
 	width: 15%;
 	text-align: center;
 }
+
+.page-header {
+	text-align: center;
+	padding-top: 15px;
+	text-decoration: underline;
+}
+
+.no-rounds-message {
+	padding-top: 80px;
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+
+.no-rounds-message > h5 {
+	font-weight: 200;
+}

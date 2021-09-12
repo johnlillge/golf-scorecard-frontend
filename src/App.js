@@ -7,6 +7,8 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import Logout from './components/Logout/Logout';
 import RoundPage from './pages/RoundPage/RoundPage';
+import BestScoresPage from './pages/BestScoresPage/BestScoresPage';
+import AverageScorePage from './pages/AverageScoresPage/AverageScorePage';
 
 function App() {
 	return (
@@ -18,6 +20,8 @@ function App() {
 					{localStorage.getItem('userID') ? (
 						<Switch>
 							<Route exact path="/rounds" component={RoundPage} />
+							<Route exact path="/best-scores" component={BestScoresPage} />
+							<Route exact path="/average-scores" component={AverageScorePage} />
 							<Route exact path="/signin" render={(props) => <Redirect {...props} to={'/'} />} />
 							<Route exact path="/signup" render={(props) => <Redirect {...props} to={'/'} />} />
 							<Route exact path="/logout" component={Logout} />
@@ -25,6 +29,16 @@ function App() {
 					) : (
 						<Switch>
 							<Route exact path="/rounds" render={(props) => <Redirect {...props} to={'/signin'} />} />
+							<Route
+								exact
+								path="/best-scores"
+								render={(props) => <Redirect {...props} to={'/signin'} />}
+							/>
+							<Route
+								exact
+								path="/average-scores"
+								render={(props) => <Redirect {...props} to={'/signin'} />}
+							/>
 							<Route exact path="/signin" render={(props) => <LoginPage {...props} />} />
 							<Route exact path="/signup" render={(props) => <SignupPage {...props} />} />
 							<Route exact path="/logout" render={(props) => <Redirect {...props} to={'/'} />} />
